@@ -7,7 +7,7 @@ header{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #a3d5ff;
+    background-color: black;
     padding: 10px 30px;
 
     position: sticky;
@@ -20,7 +20,7 @@ header{
 
 header h1{
     text-align: center;
-    color: #6879d0;
+    color: red;
     flex: 1;
     font: 50px "Times New Roman";
     font-weight:800;
@@ -81,10 +81,15 @@ a:hover{
     border-color: darkblue;
 }
 
-
-.list-aboutme{
-    list-style-type: lower-roman;
+.content .abtMeText{
+    color: brown;
+    text-decoration: underline;
 }
+
+
+/*.list-aboutme{
+    list-style-type: lower-roman;
+} */
 
 footer{
     width: 100%;
@@ -96,4 +101,17 @@ footer{
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 20px;
+}
+.project-table{
+    
+    border-collapse: collapse;
+    margin: auto;
+
+    margin-top: 10px;
+}
+
+.project-table td, .project-table th{
+    border: 1px dashed black;
+    padding: 3px;
+    text-align: center;
 }
