@@ -68,7 +68,7 @@ a:hover{
     width: 100%;
     padding-left: 40px;
     padding-bottom: 50px;
-    background-image: url(images/icon.png);
+    background-image: url(images/computerscience.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -81,15 +81,20 @@ a:hover{
     border-color: darkblue;
 }
 
+.content p{
+    color:#8579ff
+}
+
 .content .abtMeText{
     color: brown;
     text-decoration: underline;
 }
 
 
-/*.list-aboutme{
+.list-aboutme{
     list-style-type: lower-roman;
-} */
+    padding-left: 30px;
+} 
 
 footer{
     width: 100%;
@@ -114,4 +119,34 @@ footer{
     border: 1px dashed black;
     padding: 3px;
     text-align: center;
+}
+
+.content form{
+    width: fit-content;
+    margin: auto;
+    text-align: left;
+    padding: 5px;
+}
+
+.content legend{
+    text-align: center;
+}
+.content fieldset{
+    padding: 3px;
+}
+
+.content label{
+    display: inline-block;
+    vertical-align: top;
+    width: 75px;
+}
+
+.content input, .content textarea{
+    margin-bottom: 5px;
+    width: 250px;
+    padding: 6px;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
 }

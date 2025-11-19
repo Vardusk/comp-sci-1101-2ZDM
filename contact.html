@@ -4,9 +4,13 @@
         <link rel= "stylesheet" href = "styles.css">
         <link rel="shortcut icon" href = "images/icon.pdf">
         <title>Contact Me</title>
+        <script src="contact.js" defer></script>
     </head>
     <body>
         <header>
+            <div class="logo">
+                <img src="images/computerscience.png">
+            </div>
         <!--heading tag h1,h2,h3...,h6-->
             <h1>My Portfolio</h1>
             <!--use anchor tag for links-->
@@ -24,11 +28,29 @@
         </header>
 
         <div class ="content">
+            <form name="contactMe" onsubmit="return validateForm()">
+                <fieldset>
+                    <legend>Contact Me</legend>
+                    <label>Name:</label>
+                    <input name="name" type="text"></br>
 
+                    <label>Email:</label>
+                    <input name="email" type="email"><br/>
+
+                    <label>Phone:</label>
+                    <input name="phone" type="tel"><br/>
+
+                    <label>Message:</label>
+                    <textarea name="msg" rows="4" cols="50"></textarea><br/>
+
+                    <lable></lable>
+                    <input type="submit" value ="Send Message!">
+                </fieldset>
+            </form>
         </div>
 
         <footer>
-            copyright &copy; CSCI 1101
+            copyright &copy; Zachary Munoz
         </footer>
     </body>
 </html>    
