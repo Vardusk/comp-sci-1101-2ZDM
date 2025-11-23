@@ -1,152 +1,297 @@
-{
-    margin: 0px; /* property-name: property-value; */
-    padding: 0px;
+/* =========================================
+   RESET + THEME COLORS
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    padding: 10px 30px;
+/* Main color palette */
+:root {
+  --bg: #0b1220;          /* page background */
+  --card: #1f2937;        /* section/card background */
+  --text-main: #f9fafb;   /* main text color */
+  --text-muted: #d1d5db;  /* lighter text */
+  --border: #4b5563;      /* border color */
 
-    position: sticky;
-    top:0;
+  --accent1: #38bdf8;     /* cyan */
+  --accent2: #a855f7;     /* purple */
+  --accent3: #fb923c;     /* orange */
+
+  --radius: 10px;
 }
 
-.logo img{
-    width: 40px;
+/* =========================================
+   BASE PAGE STYLING
+   ========================================= */
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  line-height: 1.6;
 }
 
-header h1{
-    text-align: center;
-    color: red;
-    flex: 1;
-    font: 50px "Times New Roman";
-    font-weight:800;
+/* Centers content on all pages */
+.container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-.nav-bar{
-    display: flex;
-    gap: 40px;
-    list-style-type: none;
+/* Basic link styling */
+a {
+  color: var(--accent1);
+  text-decoration: none;
 }
 
-.socials{
-    padding-left: 30px;
-    display: flex;
-    gap: 20px;
+a:hover {
+  text-decoration: underline;
 }
 
-.socials img{
-    width:30px;
-    height: 30px;
+/* =========================================
+   HEADER + NAVIGATION
+   ========================================= */
+
+header {
+  background-color: #020617;
+  border-bottom: 1px solid var(--border);
 }
 
-.nav-bar a{
-    color:#8579ff;
+/* Space around the top area */
+header .container {
+  padding-block: 1rem;
 }
 
-.nav-bar .current{
-    color:#000000;
+/* Simple horizontal nav menu */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  font-size: 0.95rem;
 }
 
-a:link{
-    text-decoration: none;
+nav a {
+  color: var(--text-muted);
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
 }
 
-a:visited{
-    text-decoration: none;
+/* Highlight nav link on hover */
+nav a:hover {
+  color: var(--text-main);
+  border-bottom-color: var(--accent1);
 }
 
-a:hover{
-    text-decoration: underline;
+/* =========================================
+   HERO SECTION (Home page top area)
+   ========================================= */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
 }
 
-
-.content{
-    width: 100%;
-    padding-left: 40px;
-    padding-bottom: 50px;
-    background-image: url(images/computerscience.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-} 
-
-.home-image{
-    border-style: dotted;
-    border-width: 2px;
-    border-radius: 5px;
-    border-color: darkblue;
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
-.content p{
-    color:#8579ff
+.hero h2 {
+  font-size: 1rem;
+  color: var(--accent1);
+  font-family: ui-monospace, monospace;
 }
 
-.content .abtMeText{
-    color: brown;
-    text-decoration: underline;
+.hero p {
+  color: var(--text-muted);
+  max-width: 600px;
 }
 
-
-.list-aboutme{
-    list-style-type: lower-roman;
-    padding-left: 30px;
-} 
-
-footer{
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    color: #6879d0;
-    background-color:  #a3d5ff;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 20px;
-}
-.project-table{
-    
-    border-collapse: collapse;
-    margin: auto;
-
-    margin-top: 10px;
+/* Tags under hero text */
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
 }
 
-.project-table td, .project-table th{
-    border: 1px dashed black;
-    padding: 3px;
-    text-align: center;
+.tag {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background-color: #111827;
+  border: 1px solid #374151;
+  color: var(--accent2);
+  font-size: 0.78rem;
+  font-family: ui-monospace, monospace;
 }
 
-.content form{
-    width: fit-content;
-    margin: auto;
-    text-align: left;
-    padding: 5px;
+/* =========================================
+   MAIN SECTIONS (About, Experience, Contact)
+   ========================================= */
+
+main {
+  padding-bottom: 2rem;
 }
 
-.content legend{
-    text-align: center;
-}
-.content fieldset{
-    padding: 3px;
-}
-
-.content label{
-    display: inline-block;
-    vertical-align: top;
-    width: 75px;
+/* Section "card" */
+section {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.3rem;
+  margin-top: 1.2rem;
 }
 
-.content input, .content textarea{
-    margin-bottom: 5px;
-    width: 250px;
-    padding: 6px;
-    border: 1px solid #bbbbbb;
-    border-radius: 4px;
-    font-size: 14px;
-    box-sizing: border-box;
+/* Section headings like "ABOUT ME" */
+section h2,
+section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  font-family: ui-monospace, monospace;
+  color: var(--accent1);
+
+  /* Simple colored bar on the left */
+  border-left: 4px solid var(--accent3);
+  padding-left: 0.5rem;
+}
+
+/* Text inside sections */
+section p,
+section li {
+  font-size: 0.93rem;
+  margin-bottom: 0.35rem;
+}
+
+ul {
+  margin-left: 1.2rem;
+}
+
+/* =========================================
+   EXPERIENCE + PROJECT BLOCKS
+   ========================================= */
+
+.item,
+.project {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Slightly darker on hover */
+.item:hover,
+.project:hover {
+  background-color: #0f172a;
+}
+
+.item-title,
+.project-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.item-meta,
+.project-tech {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.project-links {
+  font-size: 0.85rem;
+}
+
+/* =========================================
+   CONTACT FORM
+   ========================================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Inputs and textarea */
+input,
+textarea {
+  padding: 0.55rem;
+  border-radius: 8px;
+  border: 1px solid #4b5563;
+  background-color: #020617;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+/* Bigger message box */
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* Highlight active field */
+input:focus,
+textarea:focus {
+  border-color: var(--accent2);
+  outline: none;
+}
+
+/* Submit button */
+button {
+  background-color: var(--accent1);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #020617;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent2);
+  color: #0b1120;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* =========================================
+   MOBILE STYLES honestly I just saw someone do this on youtube
+   and thought it would be a nice touch
+   ========================================= */
+
+@media (max-width: 640px) {
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 1.1rem;
+  }
 }
