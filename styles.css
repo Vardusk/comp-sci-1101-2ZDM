@@ -1,5 +1,5 @@
 /* =========================================
-   RESET + THEME COLORS
+   THEME COLORS
    ========================================= */
 
 * {
@@ -66,7 +66,7 @@ header .container {
   padding-block: 1rem;
 }
 
-/* Simple horizontal nav menu */
+/* horizontal nav menu */
 nav {
   display: flex;
   justify-content: flex-end;
@@ -87,7 +87,7 @@ nav a:hover {
 }
 
 /* =========================================
-   HERO SECTION (Home page top area)
+    (Home page top area)
    ========================================= */
 
 .hero {
@@ -224,6 +224,16 @@ label {
   font-size: 0.9rem;
   color: var(--text-muted);
 }
+/* used for the Icons*/
+.icon-inline {
+  height: 1em;
+  width: auto;
+  object-fit: contain; /*used to make sure no warping is done to make them all 
+  same size*/
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
 
 /* Inputs and textarea */
 input,
@@ -242,7 +252,7 @@ textarea {
   resize: vertical;
 }
 
-/* Highlight active field */
+/* Highlight focused field */
 input:focus,
 textarea:focus {
   border-color: var(--accent2);
