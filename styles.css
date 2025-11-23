@@ -10,7 +10,7 @@
 
 /* Main color palette */
 :root {
-  --bg: #0b1220;          /* page background */
+  --bg: #163981;          /* page background */
   --card: #1f2937;        /* section/card background */
   --text-main: #f9fafb;   /* main text color */
   --text-muted: #d1d5db;  /* lighter text */
@@ -57,7 +57,7 @@ a:hover {
    ========================================= */
 
 header {
-  background-color: #020617;
+  background-color: #17020b;
   border-bottom: 1px solid var(--border);
 }
 
